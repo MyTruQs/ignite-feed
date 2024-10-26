@@ -2,7 +2,7 @@ import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
 
-export function Post(){
+export function Post(props) {
     return (
         <article className={styles.post}>
             <header>
@@ -25,13 +25,13 @@ export function Post(){
                     <a href="">#novoprojeto</a>{' '}
                     <a href="">#nlw</a>{' '}
                     <a href="">#rocketseat</a>
-                </p>          
+                </p>
             </div>
 
             <form className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
 
-                <textarea 
+                <textarea
                     placeholder='Deixe um comentario'
                 />
 
