@@ -1,16 +1,26 @@
-import { Header } from './components/Header'
-import { Post } from './components/Post'
-import { Sidebar } from './components/Sidebar';
+import { Header } from './components/Header.tsx'
+import { Post } from './components/Post.tsx'
+import { Sidebar } from './components/Sidebar.tsx';
 
 import styles from './App.module.css';
 
 import './global.css';
 
-// author: { avatar_url: "", name: "", role:"" }
-// publishedAt: Date
-// content: String
+interface PostProps {
+    id: number;
+    author: {
+        avatarUrl: string;
+        name: string;
+        role: string;
+    };
+    content: {
+        type: "paragraph" | "link";
+        content: string;
+    }[];
+    publishedAt: Date;
+}
 
-const posts = [
+const posts: PostProps[] = [
     {
         id: 1,
         author: {
