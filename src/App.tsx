@@ -1,26 +1,12 @@
 import { Header } from './components/Header.tsx'
-import { Post } from './components/Post.tsx'
+import { Post, PostType } from './components/Post.tsx'
 import { Sidebar } from './components/Sidebar.tsx';
 
 import styles from './App.module.css';
 
 import './global.css';
 
-interface PostProps {
-    id: number;
-    author: {
-        avatarUrl: string;
-        name: string;
-        role: string;
-    };
-    content: {
-        type: "paragraph" | "link";
-        content: string;
-    }[];
-    publishedAt: Date;
-}
-
-const posts: PostProps[] = [
+const posts: PostType[] = [
     {
         id: 1,
         author: {
@@ -63,9 +49,7 @@ function App() {
                         return (
                             <Post
                                 key={post.id}
-                                author={post.author}
-                                content={post.content}
-                                publishedAt={post.publishedAt}
+                                post={post}
                             />
                         )
                     })}
