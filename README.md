@@ -24,7 +24,7 @@ Bem-vindo ao repositório do projeto "Ignite Feed", uma aplicação web para sim
 
 
 ## Pré-visualização do Projeto
-![Pré-visualização do Projeto](/src/assets/image.png)
+![Pré-visualização do Projeto](/src/assets/thumbnail.png)
 
 ## Como Usar
 1. Clone o repositório para sua máquina local:
